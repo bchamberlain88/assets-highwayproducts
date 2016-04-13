@@ -19,6 +19,10 @@ html {
         display: none;
 }
 
+.googleSearch {
+    display: none;
+}
+
 .gallery-link {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5)!important;
     text-transform: uppercase;
@@ -871,6 +875,47 @@ nav.main-navigation {
 }
 .nav-search > .search-results > .results > li:hover > a > .result-info > h2 {
     color:#4EA5D5;
+}
+
+.search-result-static > a > .result-image > img {
+    width: 20%;
+    padding-top: 5px;
+    float: right;
+}
+
+.search-result-static:hover > a > .result-info > h2 {
+    color: #4EA5D5;
+}
+
+.search-result-static > a > .result-info {
+    float: left;
+    width: 75%;
+}
+
+.result-info > p > strong {
+    font-weight: normal;
+}
+
+li.search-result-static {
+    border-bottom: 1px solid #d5d5d5;
+    clear: both;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.static-search-input {
+    float: left;
+    margin-right: 5px; 
 }
 
 .list-view-options {
@@ -2129,6 +2174,11 @@ h1.main-product-slide-cat {
 }
 .leftSpacer {
   height: 1000px;
+  width: 1px;
+  float: left;
+}
+.leftBiggerSpacer {
+  height: 2000px;
   width: 1px;
   float: left;
 }
