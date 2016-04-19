@@ -748,7 +748,7 @@ nav.main-navigation {
     -o-transition:0.3s;
     transition:0.3s;
 }
-.nav-search > input {
+.search-input {
     background: url('../_images/search.svg') 15px center no-repeat #fff;
     border:0;
     color:#666;
@@ -761,7 +761,12 @@ nav.main-navigation {
     outline:none;
     padding:0 0 0 60px;
     position:relative;
-    width:100%;
+    width:80%;
+}
+.search-submit {
+    width: 15%;
+    height: 30%;
+    margin: 5% 0;
 }
 .nav-search > .search-results {
     background:#fff;
@@ -1771,7 +1776,21 @@ h2.fetch-title > .sale-item {
 .slide-right {
     right: 80px;
 }
-
+.top-left-text {
+    left: 10px;
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+}
+.top-right-text {
+    right: 10px;
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+}
+.top-right-text > p {
+    float: right;
+}
 .container > .selectors-container:before {
     background:#fff;
     content:'';

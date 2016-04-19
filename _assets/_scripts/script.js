@@ -783,23 +783,10 @@ function searchClick(){
         // fade in the search form
         $( '.nav-search' ).fadeIn( 250, function() {
           // focus on the input when it loads
-          $( this ).find( 'input' ).focus();
+          $( '.search-input' ).focus();
           // perform check every time a letter is typed into the form
-          $( '.nav-search input' ).keyup( function() {
-            // get the number of characters in the input
-            var carCount = $( this ).val().length;
-            // check how many characters have been typed
-            if(carCount > 0){
-              // there is at least one character - submit the form
-              $('.nav-search').submit();
-            } else {
-              // nothing has been typed - do nothing
-            }
-          } );
           // let's submit the search form
           $( '.nav-search' ).submit( function( event ) {
-            // prevent default form submission
-            event.preventDefault();
             // get the inputs value and seperate words with a dash
             var query = $( this ).find( 'input' ).val().replace( /\s+/g, '-' ).toLowerCase();
             // fade in the results container
