@@ -2837,6 +2837,7 @@ p.closeout-desc {
 
 h2.closeout-header {
     text-align: left;
+    text-transform: none;
 }
 
 .msrp {
