@@ -2608,7 +2608,7 @@ h1.main-product-slide-cat {
     -moz-transform:translateX(-50%) translateY(-50%);
     -ms-transform:translateX(-50%) translateY(-50%);
     transform:translateX(-50%) translateY(-50%);*/
-    width:auto;
+    width:100%;
     z-index:0;
 }
 .media-container > .video-container:hover > img,
@@ -4207,7 +4207,7 @@ a#right:hover {
     -moz-transform:translateX(-50%) translateY(-50%);
     -ms-transform:translateX(-50%) translateY(-50%);
     transform:translateX(-50%) translateY(-50%);
-    width:auto;
+    width:100%;
 }
 .side-gallery-img:hover > .image > img {
     opacity:0.25;
