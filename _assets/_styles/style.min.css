@@ -28,7 +28,7 @@ html {
     text-transform: uppercase;
 }
 
-.closeout {
+.clearance {
     width: 100%!important;
 }
 
@@ -2826,16 +2826,16 @@ ul.feature-list.accessory {
     margin-top: 20px;
 }
 
-.feature-list > .feature > .closeout {
+.feature-list > .feature > .clearance {
     width: 100%!important;
 }
 
-p.closeout-desc {
+p.clearance-desc {
     font-weight: bold;
     float: left!important;
 }
 
-h2.closeout-header {
+h2.clearance-header {
     text-align: left;
     text-transform: none;
 }
@@ -2849,7 +2849,7 @@ h2.closeout-header {
     margin-left: 0!important;
 }
 
-.closeout-blueprint {
+.clearance-blueprint {
     clear: left;
     margin-top: 20px;
 }
