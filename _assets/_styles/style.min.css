@@ -2840,6 +2840,15 @@ h2.clearance-header {
     text-transform: none;
 }
 
+img.releaseThumb {
+    border: 1px solid black;
+    margin-bottom: 5%;
+}
+
+.releaseDesc {
+    float: left;
+}
+
 .msrp {
     text-decoration: line-through;
 }
@@ -4207,7 +4216,7 @@ a#right:hover {
     -moz-transform:translateX(-50%) translateY(-50%);
     -ms-transform:translateX(-50%) translateY(-50%);
     transform:translateX(-50%) translateY(-50%);
-    width:100%;
+    width:auto;
 }
 .side-gallery-img:hover > .image > img {
     opacity:0.25;
