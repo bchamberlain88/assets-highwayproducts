@@ -2843,6 +2843,7 @@ h2.clearance-header {
 img.releaseThumb {
     border: 1px solid black;
     margin-bottom: 5%;
+    width: 80%;
 }
 
 .releaseDesc {
@@ -5604,7 +5605,9 @@ i.fa.fa-cog.fa-spin {
 }
 
 @media(max-width:330px) {
-    
+    .side-gallery-img > .image > img {
+        width: 100%;
+    }
     .message-sent {
         width: 200px;
     }
