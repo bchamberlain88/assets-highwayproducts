@@ -1152,12 +1152,7 @@ if( $.cookie( 'voted_'+loc[2] ) ) {
 
 
 $('.service-link').on('click', function(){
-  var service = $(this).attr('data-service');
-  //$( '.get-quote-wrapper' ).css( 'display', 'block' );
-  $('body').append("<div class='privacy-wrapper'></div>");
-  $('.privacy-wrapper').load('../../service.php', function(){
-
-  });
+  $('.privacy-wrapper').css('display','block');
 });
 
 
