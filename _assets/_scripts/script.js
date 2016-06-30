@@ -1085,20 +1085,46 @@ $('.aweber-input').each(function(){
 });
 //event handler for different form submissions
 $('.aweber-form').on('submit', function(event){
-  event.preventDefault();
-  var form = $(this);
-    if(form.hasClass('contact-form')){
-      $('#af-submit-image-1082506812').click();
-    } 
-    if(form.hasClass('newsletter-form')){
-      $('input[tabindex=501]').click();
-    } 
-    //if it isn't the contact form or newsletter form
-    if(!(form.hasClass('contact-form')) && !(form.hasClass('newsletter-form'))) {
-      $.cookie( 'quote_sent', 'true', { expires: 2, path: '/' } );
-      $('input[tabindex=511]').click();
-    }
-      });
+    //disable after submit to prevent double-click
+    $('.button').attr('disabled',true);
+    event.preventDefault();
+    //capture form values and submit to mailChimp
+    $.ajax({
+        type: 'POST',
+        url: '/_includes/mcSubscribe.php',
+        data: {name: $("input[name='fillname']").val(), email: $("input[name='email']").val(), phone: $("input[name='phone']").val(), zip: $("input[name='zip']").val(), message: $("textarea[name='message']").val(), contact: $("input[name='contact']").val(),truck: $("input[name='truck']").val(),mc_group_id: $(".mc_group_id").val()
+        },
+        success: function(){
+            var form = $(this);
+            if(form.hasClass('contact-form')){
+                $('#af-submit-image-1082506812').click();
+            } 
+            if(form.hasClass('newsletter-form')){
+                $('input[tabindex=501]').click();
+            } 
+            //if it isn't the contact form or newsletter form
+            if(!(form.hasClass('contact-form')) && !(form.hasClass('newsletter-form'))) {
+                $.cookie( 'quote_sent', 'true', { expires: 2, path: '/' } );
+                $('input[tabindex=511]').click();
+            }
+        },
+        //even if mc submit fails, we still want to go ahead with aweber submission
+        error: function(){
+            var form = $(this);
+            if(form.hasClass('contact-form')){
+                $('#af-submit-image-1082506812').click();
+            } 
+            if(form.hasClass('newsletter-form')){
+                $('input[tabindex=501]').click();
+            } 
+            //if it isn't the contact form or newsletter form
+            if(!(form.hasClass('contact-form')) && !(form.hasClass('newsletter-form'))) {
+                $.cookie( 'quote_sent', 'true', { expires: 2, path: '/' } );
+                $('input[tabindex=511]').click();
+            }
+        }
+    });
+});
 
 //handle close window functionality for success dialogue
 $('.close-message').click(function(){
